@@ -1,20 +1,144 @@
-/* Open-PYQ: Global styles */
-
 :root {
 --light-blue: #00A5FF;
 --red: #FF5252;
 --brown: #8D7467;
 --black: #000000;
 --white: #FFFFFF;
+--light-bg: #F4F9FC;
 }
 
 * {
   box-sizing: border-box;
   }
 
+html {
+scroll-behavior: smooth;
+}
+
 body {
 margin: 0;
-font-family: Arial, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.6;
 background: var(--white);
 color: var(--black);
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+padding: 18px 7%;
+border-bottom: 1px solid #E5E7EB;
+}
+
+header h2 {
+margin: 0;
+color: var(--light-blue);
+}
+
+nav {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+nav a {
+color: var(--black);
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+color: var(--light-blue);
+}
+
+.hero {
+padding: 90px 7%;
+background: var(--light-bg);
+text-align: center;
+}
+
+.hero > p:first-child {
+color: var(--brown);
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+.hero h1 {
+max-width: 800px;
+margin: 20px auto;
+font-size: clamp(32px, 6vw, 56px);
+line-height: 1.15;
+}
+
+.hero p {
+max-width: 650px;
+margin: 20px auto;
+}
+
+.button {
+display: inline-block;
+margin-top: 15px;
+padding: 13px 25px;
+background: var(--light-blue);
+color: var(--white);
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+}
+
+.button:hover {
+background: #0086D1;
+}
+
+#exams,
+#about {
+padding: 60px 7%;
+text-align: center;
+}
+
+#exams h2,
+#about h2 {
+font-size: 30px;
+}
+
+#exam-list {
+margin-top: 25px;
+padding: 25px;
+background: var(--light-bg);
+border-radius: 12px;
+}
+
+#about {
+background: var(--white);
+}
+
+footer {
+padding: 25px;
+background: var(--black);
+color: var(--white);
+text-align: center;
+}
+
+@media (max-width: 600px) {
+header {
+flex-direction: column;
+padding: 18px;
+}
+
+nav {
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero {
+    padding: 60px 20px;
+}
+
+#exams,
+#about {
+    padding: 45px 20px;
+}
+
 }

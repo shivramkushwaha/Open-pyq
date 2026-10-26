@@ -1,0 +1,26 @@
+[
+{
+"id": "gate",
+"name": "GATE",
+"status": "available",
+"description": "Explore engineering, science, and mathematics examination papers."
+},
+{
+"id": "upsc-cse",
+"name": "UPSC Civil Services",
+"status": "planned",
+"description": "Explore the Civil Services syllabus and previous-year questions."
+},
+{
+"id": "cat",
+"name": "CAT",
+"status": "planned",
+"description": "Explore quantitative aptitude, verbal ability, and reasoning."
+},
+{
+"id": "ielts",
+"name": "IELTS",
+"status": "planned",
+"description": "Explore English language learning and examination practice."
+}
+]

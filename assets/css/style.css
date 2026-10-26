@@ -142,3 +142,55 @@ nav {
 }
 
 }
+/* Examination card layout */
+
+#exam-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+margin-top: 30px;
+padding: 0;
+background: transparent;
+}
+
+.exam-card {
+padding: 24px;
+text-align: left;
+background: #FFFFFF;
+border: 1px solid #E0E7ED;
+border-top: 4px solid #00A5FF;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exam-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.exam-card h3 {
+margin-top: 0;
+margin-bottom: 12px;
+font-size: 22px;
+}
+
+.exam-card p {
+color: #444444;
+}
+
+.exam-card .exam-status {
+display: inline-block;
+padding: 5px 10px;
+background: #EAF7FF;
+color: #0069A6;
+border-radius: 20px;
+font-size: 13px;
+font-weight: bold;
+}
+
+@media (max-width: 500px) {
+#exam-list {
+grid-template-columns: 1fr;
+}
+}

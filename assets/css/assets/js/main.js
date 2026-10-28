@@ -1,10 +1,8 @@
-"use strict";
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 const examList = document.getElementById("exam-list");
 
 if (!examList) {
-    console.error("Examination list element not found.");
+    console.error("The exam-list element was not found.");
     return;
 }
 
@@ -15,43 +13,56 @@ async function loadExams() {
         const response = await fetch("data/exams.json");
 
         if (!response.ok) {
-            throw new Error("Could not load examination data.");
+            throw new Error(`Failed to load exams: ${response.status}`);
         }
 
         const exams = await response.json();
 
-        displayExams(exams);
+        if (!Array.isArray(exams)) {
+            throw new Error("The exam database must contain an array.");
+        }
+
+        examList.replaceChildren();
+
+        if (exams.length === 0) {
+            examList.textContent = "No examination environments are available yet.";
+            return;
+        }
+
+        exams.forEach((exam) => {
+            const card = document.createElement("article");
+            card.className = "exam-card";
+
+            const title = document.createElement("h3");
+            title.textContent = exam.name;
+
+            const description = document.createElement("p");
+            description.textContent = exam.description;
+
+            const status = document.createElement("span");
+            status.className = `exam-status status-${exam.status}`;
+            status.textContent =
+                exam.status === "available" ? "Available" :
+                exam.status === "planned" ? "Planned" :
+                "Status unknown";
+
+            card.append(title, description, status);
+
+            if (exam.status === "available" && exam.id === "gate") {
+                const button = document.createElement("a");
+                button.href = "gate/index.html";
+                button.className = "button";
+                button.textContent = "Explore GATE";
+                card.appendChild(button);
+            }
+
+            examList.appendChild(card);
+        });
     } catch (error) {
-        console.error(error);
-
+        console.error("Unable to load examination data:", error);
         examList.textContent =
-            "Unable to load examinations. Please try again later.";
+            "We couldn't load the examination environments. Please try again later.";
     }
-}
-
-function displayExams(exams) {
-    examList.replaceChildren();
-
-    exams.forEach(function (exam) {
-        const card = document.createElement("article");
-        card.className = "exam-card";
-
-        const title = document.createElement("h3");
-        title.textContent = exam.name;
-
-        const description = document.createElement("p");
-        description.textContent = exam.description;
-
-        const status = document.createElement("p");
-        status.className = "exam-status";
-        status.textContent =
-            exam.status === "available"
-                ? "Available"
-                : "Coming soon";
-
-        card.append(title, description, status);
-        examList.appendChild(card);
-    });
 }
 
 });

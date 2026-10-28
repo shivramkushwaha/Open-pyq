@@ -1,0 +1,134 @@
+{
+"exam_id": "gate",
+"paper_code": "MA",
+"paper_name": "Mathematics",
+"syllabus_year": 2026,
+"source": "https://gate2026.iitg.ac.in/doc/IB/GATE2026-IB-v22082025-1300.pdf",
+"subjects": [
+{
+"id": "calculus",
+"name": "Calculus",
+"topics": [
+"Functions of two or more variables",
+"Continuity and partial derivatives",
+"Maxima and minima",
+"Double and triple integrals",
+"Vector calculus"
+]
+},
+{
+"id": "linear-algebra",
+"name": "Linear Algebra",
+"topics": [
+"Vector spaces",
+"Linear transformations",
+"Systems of linear equations",
+"Eigenvalues and eigenvectors",
+"Inner product spaces",
+"Jordan canonical form",
+"Bilinear and quadratic forms"
+]
+},
+{
+"id": "real-analysis",
+"name": "Real Analysis",
+"topics": [
+"Metric spaces",
+"Sequences and series of functions",
+"Uniform convergence",
+"Power series",
+"Lebesgue measure and integration"
+]
+},
+{
+"id": "complex-analysis",
+"name": "Complex Analysis",
+"topics": [
+"Analytic functions",
+"Complex integration",
+"Taylor and Laurent series",
+"Residue theorem",
+"Conformal mappings"
+]
+},
+{
+"id": "ordinary-differential-equations",
+"name": "Ordinary Differential Equations",
+"topics": [
+"First-order ordinary differential equations",
+"Linear differential equations",
+"Laplace transforms",
+"Power series and Frobenius method",
+"Sturm-Liouville eigenvalue problems",
+"Stability of autonomous systems"
+]
+},
+{
+"id": "algebra",
+"name": "Algebra",
+"topics": [
+"Groups and subgroups",
+"Group homomorphisms",
+"Group actions and Sylow's theorems",
+"Rings and ideals",
+"Fields and field extensions"
+]
+},
+{
+"id": "functional-analysis",
+"name": "Functional Analysis",
+"topics": [
+"Normed linear spaces",
+"Banach spaces",
+"Hahn-Banach theorem",
+"Hilbert spaces",
+"Spectral theorem for compact self-adjoint operators"
+]
+},
+{
+"id": "numerical-analysis",
+"name": "Numerical Analysis",
+"topics": [
+"Numerical solutions of linear systems",
+"Numerical solutions of nonlinear equations",
+"Interpolation",
+"Numerical differentiation and integration",
+"Numerical solutions of initial value problems"
+]
+},
+{
+"id": "partial-differential-equations",
+"name": "Partial Differential Equations",
+"topics": [
+"First-order partial differential equations",
+"Classification of second-order PDEs",
+"Separation of variables",
+"Heat and wave equations",
+"Laplace and Fourier transform methods"
+]
+},
+{
+"id": "topology",
+"name": "Topology",
+"topics": [
+"Bases and subbases",
+"Subspace and product topology",
+"Metric topology",
+"Connectedness and compactness",
+"Countability and separation axioms"
+]
+},
+{
+"id": "linear-programming",
+"name": "Linear Programming",
+"topics": [
+"Linear programming models",
+"Convex sets and extreme points",
+"Simplex method",
+"Duality theory",
+"Transportation problems",
+"Assignment problems"
+]
+}
+]
+}
